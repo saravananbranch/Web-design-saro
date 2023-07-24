@@ -7,6 +7,14 @@
 
 // components
 @import "./components/buttons";
+@import "./components/badges";
 
 // layouts
 @import "./layouts/header";
+@import "./layouts/background_elements";
+
+// utlities
+@import "./utilities/spacing";
+
+// pages
+@import "./pages/home";
