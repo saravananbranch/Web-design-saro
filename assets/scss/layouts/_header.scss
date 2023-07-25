@@ -8,6 +8,11 @@
   padding: 1rem 20rem;
   border-bottom: 1px solid #eee;
 
+  &--logo {
+    display: flex;
+    align-items: center;
+  }
+
   &--menu {
     display: flex;
     align-items: center;

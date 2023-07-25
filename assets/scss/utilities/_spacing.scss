@@ -21,7 +21,7 @@ $directions: top, right, bottom, left;
 
     // creating padding utilities for all directions
 
-    .m#{str-slice($direction, 0,1)}-#{$space} {
+    .p#{str-slice($direction, 0,1)}-#{$space} {
       padding-#{$direction}: #{$space}rem !important;
     }
   }

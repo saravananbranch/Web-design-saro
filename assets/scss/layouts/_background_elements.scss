@@ -19,7 +19,7 @@
     width: 15px;
     height: 15px;
     background-color: transparent;
-    border: 3px solid #3f43fa;
+    border: 3px solid #f73ffa;
     border-radius: 0.35rem;
     z-index: -1;
     transform: rotate(360deg);
@@ -32,7 +32,7 @@
     width: 15px;
     height: 15px;
     background-color: transparent;
-    border: 3px solid #3f43fa;
+    border: 3px solid #3ffae4;
     border-radius: 0.35rem;
     z-index: -1;
     transform: rotate(360deg);
@@ -86,6 +86,42 @@
     border-radius: 50%;
     z-index: -1;
     transform: rotate(360deg);
+    animation: box-shape linear 5s infinite;
+  }
+  .heart1 {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 51%;
+    left: 13%;
+    z-index: -1;
+    color: #f806c4;
+    animation: box-shape linear 5s infinite;
+  }
+  .heart2 {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 70%;
+    right: 13%;
+    z-index: -1;
+    color: #f80606;
+    animation: box-shape linear 5s infinite;
+  }
+  .heart3 {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    z-index: -1;
+    color: #06f89b;
+    animation: box-shape linear 5s infinite;
+  }
+  .heart4 {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    z-index: -1;
+    color: #f88306;
     animation: box-shape linear 5s infinite;
   }
 }
