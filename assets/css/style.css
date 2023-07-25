@@ -941,6 +941,10 @@ a {
 .roadmap--heading {
   text-align: center;
 }
+.roadmap--heading h2 {
+  font-size: 3rem;
+  color: #3f43fd;
+}
 .roadmap--items {
   display: flex;
   align-items: center;

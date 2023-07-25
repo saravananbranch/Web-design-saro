@@ -6,6 +6,11 @@
 
   &--heading {
     text-align: center;
+
+    h2 {
+      font-size: 3rem;
+      color: func.theme-colors();
+    }
   }
   &--items {
     display: flex;

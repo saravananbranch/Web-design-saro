@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SASS PROJECT</title>
 
-    <link
-      rel="shortcut icon"
-      href="./assets/img/favicon.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./assets/img/s.png" type="image/x-icon" />
 
     <!-- FontAwesome 6.2.0 CSS -->
     <link
@@ -31,6 +27,10 @@
     <!-- ========== Start custom style ========== -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- ========== End custom style ========== -->
+
+    <!-- ========== Start AOS ========== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- ========== End AOS ========== -->
   </head>
   <body>
     <!-- ========== Start header ========== -->
@@ -102,14 +102,18 @@
         </div>
       </section>
       <section class="about-area space-x-5">
-        <div>
+        <div data-aos="fade-right" data-aos-duration="1000">
           <img
             src="./assets/img/web-development-illustration.png"
             alt="About-img"
             class="about-area--img"
           />
         </div>
-        <div class="about-area--contents">
+        <div
+          class="about-area--contents"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <h2>Learing about SASS</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
@@ -126,7 +130,11 @@
           <div class="line"></div>
         </div>
         <div class="roadmap--items space-x-3">
-          <div class="roadmap--item">
+          <div
+            class="roadmap--item"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <div class="roadmap--item__img">
               <img src="./assets/img/html-logo.png" alt="html logo" />
             </div>
@@ -135,7 +143,11 @@
               <p>Learn how to structure webpages</p>
             </div>
           </div>
-          <div class="roadmap--item">
+          <div
+            class="roadmap--item"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
             <div class="roadmap--item__img">
               <img src="./assets/img/css-logo.png" alt="css logo" />
             </div>
@@ -144,7 +156,11 @@
               <p>Learn how to structure webpages</p>
             </div>
           </div>
-          <div class="roadmap--item">
+          <div
+            class="roadmap--item"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <div class="roadmap--item__img">
               <img src="./assets/img/js-logo.jpg" alt="js logo" />
             </div>
@@ -161,5 +177,12 @@
     <!-- ========== Start footer ========== -->
     <footer></footer>
     <!-- ========== End footer ========== -->
+
+    <!-- ========== Start AOS ========== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- ========== End AOS ========== -->
   </body>
 </html>
