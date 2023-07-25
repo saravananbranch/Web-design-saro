@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@400;700;900&family=Ysabeau+SC:wght@600&display=swap");
 * {
   padding: 0;
@@ -17,6 +18,14 @@ a {
 .color-anim {
   transition: 500ms;
   animation: color-change 10s infinite;
+}
+
+.line {
+  width: 5rem;
+  height: 0.5rem;
+  border-radius: 6px;
+  margin: 30px auto;
+  background: linear-gradient(to right, rgb(255, 72, 0), rgb(0, 110, 255), rgb(238, 255, 0));
 }
 
 .btn, .btn-primary-outlined, .btn-primary {
@@ -876,6 +885,14 @@ a {
     color: #04cdff;
   }
 }
+@keyframes rotate-infinite {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .hero-area {
   display: flex;
   justify-content: space-around;
@@ -894,6 +911,123 @@ a {
   font-size: 1.2rem;
   line-height: 1.8;
   color: gray;
+}
+
+.about-area {
+  padding: 8rem 20rem;
+  background-color: #3f43fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.about-area--img {
+  width: 32rem;
+}
+.about-area--contents {
+  color: #fff;
+}
+.about-area--contents h2 {
+  font-size: 3rem;
+}
+.about-area--contents p {
+  line-height: 2;
+  color: #cfcfcf;
+}
+
+.roadmap {
+  padding: 8rem 20rem;
+}
+.roadmap--heading {
+  text-align: center;
+}
+.roadmap--items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.roadmap--item {
+  position: relative;
+  padding: 3rem 1rem;
+  text-align: center;
+  max-width: 350px;
+  cursor: pointer;
+  filter: grayscale(100%);
+  margin-left: 3rem;
+  transition: 500ms;
+}
+.roadmap--item:hover .roadmap--item__img::after {
+  animation: rotate-infinite 4000ms linear infinite;
+}
+.roadmap--item__img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px;
+}
+.roadmap--item__img img {
+  width: 60px;
+  margin-top: 25px;
+}
+.roadmap--item__img::after {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 5px dotted #3f43fd;
+  border-radius: 50%;
+}
+.roadmap--item__contents {
+  margin-top: 2rem;
+}
+.roadmap--item__contents h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.roadmap--item__contents p {
+  color: gray;
+  line-height: 1.5;
+}
+.roadmap--item:not(:last-child)::before {
+  position: absolute;
+  content: "\f054";
+  top: 35%;
+  right: -30%;
+  width: 70px;
+  height: 70px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-size: 3rem;
+  color: #020702;
+  line-height: 1;
+  z-index: 1;
+  transition: 500ms;
+}
+.roadmap--item:hover:not(:last-child)::before {
+  color: #3f43fd;
+  right: -32%;
+}
+.roadmap--item:hover:last-child::after {
+  position: absolute;
+  content: "😊";
+  top: 35%;
+  right: -10%;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-size: 3rem;
+  color: #020702;
+  line-height: 1;
+  z-index: 1;
+  color: #3f43fd;
+}
+.roadmap--item:hover h5 {
+  color: #3f43fd;
+}
+.roadmap--item:hover {
+  filter: grayscale(0);
 }
 
 /*# sourceMappingURL=style.css.map */
