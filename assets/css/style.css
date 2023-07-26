@@ -28,6 +28,11 @@ a {
   background: linear-gradient(to right, rgb(255, 72, 0), rgb(0, 110, 255), rgb(238, 255, 0));
 }
 
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
 .btn, .btn-primary-outlined, .btn-primary {
   padding: 0.8rem 1.6rem;
   border-radius: 6px;
@@ -96,15 +101,33 @@ a {
   padding: 1rem 20rem;
   border-bottom: 1px solid #eee;
 }
+@media only screen and (max-width: 576px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+}
 .header--logo {
   display: flex;
   align-items: center;
+}
+.header .menu-bar {
+  display: none;
+}
+@media only screen and (max-width: 576px) {
+  .header .menu-bar {
+    display: block;
+  }
 }
 .header--menu {
   display: flex;
   align-items: center;
   list-style: none;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 576px) {
+  .header--menu {
+    display: none;
+  }
 }
 .header--menu__item > a {
   margin-right: 1.5rem;
@@ -120,6 +143,11 @@ a {
   color: #3f43fd;
 }
 
+@media only screen and (max-width: 576px) {
+  .background-shapes {
+    display: none;
+  }
+}
 .background-shapes .box1 {
   position: absolute;
   top: 20%;
@@ -951,6 +979,12 @@ a {
   align-items: center;
   padding: 8rem 20rem;
 }
+@media only screen and (max-width: 576px) {
+  .hero-area {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+}
 .hero-area--contents {
   max-width: 34rem;
 }
@@ -958,11 +992,35 @@ a {
   font-size: 3rem;
   font-weight: 600;
 }
+@media only screen and (max-width: 576px) {
+  .hero-area--title {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
 .hero-area--desc {
   margin-top: 2rem;
   font-size: 1.2rem;
   line-height: 1.8;
   color: gray;
+}
+@media only screen and (max-width: 576px) {
+  .hero-area--desc {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero-area--buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero-area--buttons button {
+    margin-right: 0;
+  }
 }
 
 .about-area {
@@ -973,6 +1031,18 @@ a {
   align-items: center;
   margin-top: 2rem;
 }
+@media only screen and (max-width: 576px) {
+  .about-area {
+    padding: 4rem 2rem;
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .about-area div {
+    margin-right: 0;
+  }
+}
 .about-area--img {
   width: 32rem;
 }
@@ -982,13 +1052,30 @@ a {
 .about-area--contents h2 {
   font-size: 3rem;
 }
+@media only screen and (max-width: 576px) {
+  .about-area--contents h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
 .about-area--contents p {
   line-height: 2;
   color: #cfcfcf;
 }
+@media only screen and (max-width: 576px) {
+  .about-area--contents p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
 
 .roadmap {
   padding: 8rem 20rem;
+}
+@media only screen and (max-width: 576px) {
+  .roadmap {
+    padding: 4rem 2rem;
+  }
 }
 .roadmap--heading {
   text-align: center;
@@ -997,11 +1084,21 @@ a {
   font-size: 3rem;
   color: #3f43fd;
 }
+@media only screen and (max-width: 576px) {
+  .roadmap--heading h2 {
+    font-size: 2rem;
+  }
+}
 .roadmap--items {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
+}
+@media only screen and (max-width: 576px) {
+  .roadmap--items {
+    flex-direction: column;
+  }
 }
 .roadmap--item {
   position: relative;
@@ -1062,6 +1159,13 @@ a {
   z-index: 1;
   transition: 500ms;
 }
+@media only screen and (max-width: 576px) {
+  .roadmap--item:not(:last-child)::before {
+    content: "\f078";
+    top: 90%;
+    left: 35%;
+  }
+}
 .roadmap--item:hover:not(:last-child)::before {
   color: #3f43fd;
   right: -32%;
@@ -1079,6 +1183,12 @@ a {
   z-index: 1;
   color: #3f43fd;
 }
+@media only screen and (max-width: 576px) {
+  .roadmap--item:hover:last-child::after {
+    top: 100%;
+    left: 0;
+  }
+}
 .roadmap--item:hover h5 {
   color: #3f43fd;
 }
@@ -1090,6 +1200,11 @@ a {
   padding: 8rem 20rem;
   background-color: rgb(243, 220, 220);
 }
+@media only screen and (max-width: 576px) {
+  .contact {
+    padding: 4rem 2rem;
+  }
+}
 .contact-card {
   display: flex;
   justify-content: space-between;
@@ -1099,14 +1214,34 @@ a {
   border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+@media only screen and (max-width: 576px) {
+  .contact-card {
+    flex-direction: column;
+  }
+}
 .contact-card--contents {
   flex-grow: 1;
 }
 .contact-card--contents h4 {
   font-size: 1.2rem;
 }
+@media only screen and (max-width: 576px) {
+  .contact-card--contents h4 {
+    text-align: center;
+  }
+}
 .contact-card--contents p {
   color: gray;
+}
+@media only screen and (max-width: 576px) {
+  .contact-card--contents p {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .contact-card--contents .contact-buttons {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

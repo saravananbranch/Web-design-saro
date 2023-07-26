@@ -40,6 +40,9 @@
         <h2 class="header--logo__h2 color-anim ml-1">SASS</h2>
       </div>
       <div>
+        <div class="menu-bar">
+          <i class="fa-solid fa-bars"></i>
+        </div>
         <ul class="header--menu">
           <li class="header--menu__item">
             <a href="#" class="active">Home</a>
@@ -88,7 +91,7 @@
             accusantium quaerat ipsum accusamus culpa porro voluptates dolor
             repellat vel distinctio.
           </p>
-          <div class="mt-1 space-x-1 space-y-1">
+          <div class="hero-area--buttons mt-1 space-x-1 space-y-1">
             <button type="button" class="btn-primary text-uppercase">
               <i class="fas fa-video mr-1"></i> Watch it free
             </button>
@@ -98,19 +101,23 @@
           </div>
         </div>
         <div>
-          <img src="./assets/img/web-design-illustration.png" alt="Web-Page" />
+          <img
+            src="./assets/img/web-design-illustration.png"
+            alt="Web-Page"
+            class="img-responsive"
+          />
         </div>
       </section>
-      <section class="about-area space-x-5">
+      <section class="about-area space-x-5 space-y-5">
         <div data-aos="fade-right" data-aos-duration="1000">
           <img
             src="./assets/img/web-development-illustration.png"
             alt="About-img"
-            class="about-area--img"
+            class="about-area--img img-responsive"
           />
         </div>
         <div
-          class="about-area--contents"
+          class="about-area--contents space-y-1"
           data-aos="fade-left"
           data-aos-duration="1000"
         >
@@ -218,12 +225,16 @@
                 required
               ></textarea>
             </div>
-            <div>
+            <div class="contact-buttons">
               <button type="submit" class="btn-primary">Send</button>
             </div>
           </form>
           <div>
-            <img src="./assets/img/cyberdude-contact.png" alt="Contact page" />
+            <img
+              src="./assets/img/cyberdude-contact.png"
+              alt="Contact page"
+              class="img-responsive"
+            />
           </div>
         </div>
       </div>

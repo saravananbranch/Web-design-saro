@@ -1,0 +1,71 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+// @media (max-width: 576px) {
+// }
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+// }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+// }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+// }
+
+// // X-Large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+// }
+
+// // XX-Large devices (larger desktops, 1400px and up)
+// @media (min-width: 1400px) {
+// }
+
+@mixin responsive($breakpoint) {
+  // X-Small devices (portrait phones, less than 576px)
+  @if $breakpoint == xs {
+    @media only screen and (max-width: 576px) {
+      @content;
+    }
+  }
+  // Small devices (landscape phones, 576px and up)
+  @else if $breakpoint == sm {
+    @media only screen and (min-width: 576px) {
+      @content;
+    }
+  }
+
+  // Medium devices (tablets, 768px and up)
+
+  @else if $breakpoint == md {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+  // Large devices (desktops, 992px and up)
+
+  @else if $breakpoint == lg {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+
+  // X-Large devices (large desktops, 1200px and up)
+
+  @else if $breakpoint == xl {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  // XX-Large devices (larger desktops, 1400px and up)
+
+  @else if $breakpoint == xxl {
+    @media only screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+}
