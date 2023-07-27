@@ -4,8 +4,20 @@
   padding: 8rem 20rem;
   background-color: rgb(243, 220, 220);
 
+  @include mixins.responsive(xxs) {
+    padding: 4rem 2rem;
+  }
   @include mixins.responsive(xs) {
     padding: 4rem 2rem;
+  }
+  @include mixins.responsive(sm) {
+    padding: 4rem 2rem;
+  }
+  @include mixins.responsive(lg) {
+    padding: 4rem 4rem;
+  }
+  @include mixins.responsive(xl) {
+    padding: 8rem 20rem;
   }
 
   &-card {
@@ -22,8 +34,20 @@
       rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
       rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
+    @include mixins.responsive(xxs) {
+      flex-direction: column;
+      padding: 2rem 1rem;
+    }
     @include mixins.responsive(xs) {
       flex-direction: column;
+    }
+    @include mixins.responsive(sm) {
+      flex-direction: column;
+      align-items: normal;
+    }
+    @include mixins.responsive(lg) {
+      flex-direction: row;
+      align-items: center;
     }
 
     &--contents {
@@ -31,20 +55,59 @@
 
       h4 {
         font-size: 1.2rem;
+        @include mixins.responsive(xxs) {
+          text-align: center;
+        }
         @include mixins.responsive(xs) {
           text-align: center;
+        }
+        @include mixins.responsive(sm) {
+          text-align: center;
+        }
+        @include mixins.responsive(lg) {
+          font-size: 2rem;
+          text-align: left;
+        }
+        @include mixins.responsive(xl) {
+          text-align: left;
         }
       }
       p {
         color: gray;
+        @include mixins.responsive(xxs) {
+          text-align: center;
+        }
         @include mixins.responsive(xs) {
           text-align: center;
+        }
+        @include mixins.responsive(sm) {
+          text-align: center;
+        }
+        @include mixins.responsive(lg) {
+          text-align: left;
         }
       }
       .contact-buttons {
+        @include mixins.responsive(xxs) {
+          text-align: center;
+        }
         @include mixins.responsive(xs) {
           text-align: center;
         }
+        @include mixins.responsive(sm) {
+          text-align: center;
+        }
+        @include mixins.responsive(lg) {
+          text-align: left;
+        }
+      }
+    }
+    img {
+      @include mixins.responsive(lg) {
+        width: 25rem;
+      }
+      @include mixins.responsive(xl) {
+        width: auto;
       }
     }
   }

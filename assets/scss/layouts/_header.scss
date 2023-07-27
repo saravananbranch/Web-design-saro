@@ -9,8 +9,20 @@
   padding: 1rem 20rem;
   border-bottom: 1px solid #eee;
 
+  @include mixins.responsive(xxs) {
+    padding: 1rem 2rem;
+  }
   @include mixins.responsive(xs) {
     padding: 1rem 2rem;
+  }
+  @include mixins.responsive(sm) {
+    padding: 1rem 2rem;
+  }
+  @include mixins.responsive(md) {
+    padding: 1rem 3rem;
+  }
+  @include mixins.responsive(xl) {
+    padding: 1rem 20rem;
   }
 
   &--logo {
@@ -20,8 +32,17 @@
   .menu-bar {
     display: none;
 
+    @include mixins.responsive(xxs) {
+      display: block;
+    }
     @include mixins.responsive(xs) {
       display: block;
+    }
+    @include mixins.responsive(sm) {
+      display: block;
+    }
+    @include mixins.responsive(md) {
+      display: none;
     }
   }
 
@@ -31,8 +52,17 @@
     list-style: none;
     text-transform: uppercase;
 
+    @include mixins.responsive(xxs) {
+      display: none;
+    }
     @include mixins.responsive(xs) {
       display: none;
+    }
+    @include mixins.responsive(sm) {
+      display: none;
+    }
+    @include mixins.responsive(md) {
+      display: flex;
     }
 
     &__item > a {

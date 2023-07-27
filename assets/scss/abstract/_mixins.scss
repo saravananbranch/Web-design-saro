@@ -24,9 +24,15 @@
 // }
 
 @mixin responsive($breakpoint) {
-  // X-Small devices (portrait phones, less than 576px)
+  // X-Small devices (portrait phones, less than 375px)
+  @if $breakpoint == xxs {
+    @media only screen and (max-width: 375px) {
+      @content;
+    }
+  }
+  // X-Small devices (portrait phones, less than 425px)
   @if $breakpoint == xs {
-    @media only screen and (max-width: 576px) {
+    @media only screen and (min-width: 425px) {
       @content;
     }
   }

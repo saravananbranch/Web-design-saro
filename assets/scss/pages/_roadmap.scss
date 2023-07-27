@@ -5,8 +5,20 @@
 .roadmap {
   padding: 8rem 20rem;
 
+  @include mixins.responsive(xxs) {
+    padding: 4rem 2rem;
+  }
   @include mixins.responsive(xs) {
     padding: 4rem 2rem;
+  }
+  @include mixins.responsive(sm) {
+    padding: 4rem 2rem;
+  }
+  @include mixins.responsive(lg) {
+    padding: 4rem 4rem;
+  }
+  @include mixins.responsive(xl) {
+    padding: 8rem 20rem;
   }
 
   &--heading {
@@ -16,8 +28,14 @@
       font-size: 3rem;
       color: func.theme-colors();
 
+      @include mixins.responsive(xxs) {
+        font-size: 2rem;
+      }
       @include mixins.responsive(xs) {
         font-size: 2rem;
+      }
+      @include mixins.responsive(lg) {
+        font-size: 3rem;
       }
     }
   }
@@ -27,8 +45,17 @@
     justify-content: center;
     margin-top: 2rem;
 
+    @include mixins.responsive(xxs) {
+      flex-direction: column;
+    }
     @include mixins.responsive(xs) {
       flex-direction: column;
+    }
+    @include mixins.responsive(sm) {
+      flex-direction: column;
+    }
+    @include mixins.responsive(lg) {
+      flex-direction: row;
     }
   }
   &--item {
@@ -40,6 +67,9 @@
     filter: grayscale(100%);
     margin-left: 3rem;
     transition: 500ms;
+    @include mixins.responsive(xxs) {
+      margin: 0;
+    }
 
     &:hover &__img::after {
       animation: rotate-infinite 4000ms linear infinite;
@@ -94,10 +124,26 @@
       z-index: 1;
       transition: 500ms;
 
+      @include mixins.responsive(xxs) {
+        content: "";
+        top: 90%;
+        left: 35%;
+      }
       @include mixins.responsive(xs) {
         content: "";
         top: 90%;
         left: 35%;
+      }
+      @include mixins.responsive(sm) {
+        content: "";
+        top: 90%;
+        left: 38%;
+      }
+      @include mixins.responsive(lg) {
+        content: "";
+        top: 35%;
+        left: auto;
+        right: -30%;
       }
     }
 
@@ -119,9 +165,22 @@
       z-index: 1;
       color: func.theme-colors();
 
+      @include mixins.responsive(xxs) {
+        top: 90%;
+        left: -20px;
+      }
       @include mixins.responsive(xs) {
-        top: 100%;
-        left: 0;
+        top: 90%;
+        left: -10px;
+      }
+      @include mixins.responsive(sm) {
+        top: 90%;
+        left: -25px;
+      }
+      @include mixins.responsive(lg) {
+        top: 35%;
+        left: auto;
+        right: -20%;
       }
     }
 

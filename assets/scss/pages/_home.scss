@@ -6,9 +6,29 @@
   align-items: center;
   padding: 8rem 20rem;
 
+  @include mixins.responsive(xxs) {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
   @include mixins.responsive(xs) {
     flex-direction: column;
     padding: 4rem 2rem;
+  }
+  @include mixins.responsive(sm) {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+  @include mixins.responsive(md) {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+  @include mixins.responsive(lg) {
+    flex-direction: row;
+    padding: 4rem 4rem;
+  }
+  @include mixins.responsive(xl) {
+    flex-direction: row;
+    padding: 8rem 20rem;
   }
 
   &--contents {
@@ -19,9 +39,17 @@
     font-size: 3rem;
     font-weight: 600;
 
+    @include mixins.responsive(xxs) {
+      font-size: 2rem;
+      text-align: center;
+    }
     @include mixins.responsive(xs) {
       font-size: 2rem;
       text-align: center;
+    }
+    @include mixins.responsive(md) {
+      font-size: 3rem;
+      text-align: left;
     }
   }
   &--desc {
@@ -30,20 +58,42 @@
     line-height: 1.8;
     color: gray;
 
+    @include mixins.responsive(xxs) {
+      font-size: 1rem;
+      text-align: center;
+    }
     @include mixins.responsive(xs) {
       font-size: 1rem;
       text-align: center;
     }
+    @include mixins.responsive(md) {
+      font-size: 1.2rem;
+      text-align: left;
+    }
   }
   &--buttons {
+    @include mixins.responsive(xxs) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
     @include mixins.responsive(xs) {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-direction: row;
+    }
+    @include mixins.responsive(md) {
+      display: inline;
     }
     button {
       @include mixins.responsive(xs) {
         margin-right: 0;
+      }
+      @include mixins.responsive(md) {
+        margin-top: 1rem;
+        margin-right: 1rem;
       }
     }
   }
