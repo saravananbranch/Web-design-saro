@@ -1847,7 +1847,7 @@ a {
 .images .card2 .img span {
   width: 25%;
   height: 100%;
-  background: url("/assets/img/sass-2.jpg");
+  background: url("/assets/img/sass-1.jpg");
   transition: 0.5s;
 }
 .images .card2 .img span:nth-child(1) {
@@ -1887,6 +1887,76 @@ a {
   transform: translateY(100%);
 }
 .images .card2 .content h4 {
+  text-align: center;
+}
+.images .card3 {
+  border-radius: 16px;
+  width: 360px;
+  height: 360px;
+  background: url("/assets/img/sass-2.jpg");
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.85);
+}
+.images .card3:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+}
+.images .card3 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.images .card3 .img span {
+  width: 25%;
+  height: 100%;
+  background: url("/assets/img/sass-2.jpg");
+  transition: 0.5s;
+}
+.images .card3 .img span:nth-child(1) {
+  background-position: 0;
+  transition-delay: 0;
+}
+.images .card3 .img span:nth-child(2) {
+  background-position: 33.33333%;
+  transition-delay: 0.1s;
+}
+.images .card3 .img span:nth-child(3) {
+  background-position: 66.66666%;
+  transition-delay: 0.2s;
+}
+.images .card3 .img span:nth-child(4) {
+  background-position: 100%;
+  transition-delay: 0.3s;
+}
+.images .card3:hover .img > span {
+  transform: translateY(-100%);
+}
+.images .card3:hover .content {
+  transform: translateY(0%);
+  transition: 1s;
+  transition-delay: 0.1s;
+}
+.images .card3 .content {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding: 20px 20px;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+}
+.images .card3 .content h4 {
   text-align: center;
 }
 
