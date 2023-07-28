@@ -5,14 +5,32 @@
 .images {
   padding: 8rem 20rem;
   width: 100%;
-  height: 60vh;
+  min-height: 60vh;
   background: #141e30;
-  background: -webkit-linear-gradient(to top, #243b55, #141e30);
-  background: linear-gradient(to top, #243b55, #141e30);
+  // background: -webkit-linear-gradient(to top, #243b55, #141e30);
+  background: linear-gradient(to top, #72abfb, #76e2ff);
   display: flex;
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
+
+  @include mixins.responsive(xxs) {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+  @include mixins.responsive(xs) {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+  @include mixins.responsive(lg) {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+  @include mixins.responsive(xl) {
+    flex-direction: row;
+    padding: 8rem 20rem;
+  }
+
   //   card 1
   .card {
     border-radius: 16px;
@@ -22,6 +40,19 @@
     position: relative;
     overflow: hidden;
     box-shadow: 0 5px 50px rgba(#000, 0.85);
+
+    @include mixins.responsive(xxs) {
+      width: 300px;
+      height: 300px;
+      background: url("/assets/img/sass-res-1.jpg");
+      margin: 2rem;
+    }
+    @include mixins.responsive(xs) {
+      margin: 2rem;
+    }
+    @include mixins.responsive(lg) {
+      margin: 2rem;
+    }
 
     &:before {
       content: "";
@@ -44,6 +75,10 @@
         height: 100%;
         background: url(https://picsum.photos/360/360?image=0);
         transition: 0.5s;
+
+        @include mixins.responsive(xxs) {
+          background: url("/assets/img/sass-res-1.jpg");
+        }
 
         &:nth-child(1) {
           background-position: 0;
@@ -96,10 +131,27 @@
     border-radius: 16px;
     width: 360px;
     height: 360px;
-    background: url("/assets/img/sass-1.jpg");
+    background: url("/assets/img/sass-2.jpg");
     position: relative;
     overflow: hidden;
     box-shadow: 0 5px 50px rgba(#000, 0.85);
+
+    @include mixins.responsive(xxs) {
+      width: 300px;
+      height: 300px;
+      background: url("/assets/img/sass-res-2.jpg");
+      margin: 2rem;
+    }
+
+    @include mixins.responsive(xxs) {
+      margin: 2rem;
+    }
+    @include mixins.responsive(xs) {
+      margin: 2rem;
+    }
+    @include mixins.responsive(lg) {
+      margin: 2rem;
+    }
 
     &:before {
       content: "";
@@ -120,8 +172,11 @@
       span {
         width: 25%;
         height: 100%;
-        background: url("/assets/img/sass-1.jpg");
+        background: url("/assets/img/sass-2.jpg");
         transition: 0.5s;
+        @include mixins.responsive(xxs) {
+          background: url("/assets/img/sass-res-2.jpg");
+        }
 
         &:nth-child(1) {
           // background: url("/assets/img/0.jpg");
@@ -178,10 +233,27 @@
     border-radius: 16px;
     width: 360px;
     height: 360px;
-    background: url("/assets/img/sass-2.jpg");
+    background: url("/assets/img/sass-3.jpg");
     position: relative;
     overflow: hidden;
     box-shadow: 0 5px 50px rgba(#000, 0.85);
+
+    @include mixins.responsive(xxs) {
+      width: 300px;
+      height: 300px;
+      background: url("/assets/img/sass-res-3.jpg");
+      margin: 2rem;
+    }
+
+    @include mixins.responsive(xxs) {
+      margin: 2rem;
+    }
+    @include mixins.responsive(xs) {
+      margin: 2rem;
+    }
+    @include mixins.responsive(lg) {
+      margin: 2rem;
+    }
 
     &:before {
       content: "";
@@ -202,8 +274,12 @@
       span {
         width: 25%;
         height: 100%;
-        background: url("/assets/img/sass-2.jpg");
+        background: url("/assets/img/sass-3.jpg");
         transition: 0.5s;
+
+        @include mixins.responsive(xxs) {
+          background: url("/assets/img/sass-res-3.jpg");
+        }
 
         &:nth-child(1) {
           // background: url("/assets/img/0.jpg");

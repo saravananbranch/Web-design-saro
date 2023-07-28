@@ -8,6 +8,11 @@
   align-items: center;
   padding: 1rem 20rem;
   border-bottom: 1px solid #eee;
+  background-color: #fff;
+  z-index: 2;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 
   @include mixins.responsive(xxs) {
     padding: 1rem 2rem;
@@ -78,6 +83,48 @@
       &.active {
         color: func.theme-colors("primary");
       }
+    }
+  }
+
+  &.navbar-fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    // z-index: 2;
+  }
+}
+.header--responsive {
+  position: fixed;
+  top: 0;
+  left: -110%;
+  width: 100vw;
+  height: 100vh;
+  background-color: func.theme-colors("primary");
+  z-index: 1;
+  transition: 500ms;
+  padding-top: 100px;
+
+  &.show {
+    text-align: center;
+    left: 0;
+    transition: 500ms;
+  }
+
+  & li {
+    padding: 2rem;
+
+    a {
+      color: #fff;
+
+      &.active {
+        color: #000;
+      }
+    }
+    & .btn-primary {
+      background-color: #fff;
+      color: func.theme-colors("primary");
     }
   }
 }

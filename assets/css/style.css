@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -26,6 +27,10 @@ a {
   border-radius: 6px;
   margin: 30px auto;
   background: linear-gradient(to right, rgb(255, 72, 0), rgb(0, 110, 255), rgb(238, 255, 0));
+}
+
+.hidden {
+  display: none;
 }
 
 @media only screen and (max-width: 375px) {
@@ -161,6 +166,11 @@ a {
   align-items: center;
   padding: 1rem 20rem;
   border-bottom: 1px solid #eee;
+  background-color: #fff;
+  z-index: 2;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 @media only screen and (max-width: 375px) {
   .header {
@@ -251,6 +261,43 @@ a {
   color: #3f43fd;
 }
 .header--menu__item > a.active {
+  color: #3f43fd;
+}
+.header.navbar-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header--responsive {
+  position: fixed;
+  top: 0;
+  left: -110%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3f43fd;
+  z-index: 1;
+  transition: 500ms;
+  padding-top: 100px;
+}
+.header--responsive.show {
+  text-align: center;
+  left: 0;
+  transition: 500ms;
+}
+.header--responsive li {
+  padding: 2rem;
+}
+.header--responsive li a {
+  color: #fff;
+}
+.header--responsive li a.active {
+  color: #000;
+}
+.header--responsive li .btn-primary {
+  background-color: #fff;
   color: #3f43fd;
 }
 
@@ -1740,14 +1787,37 @@ a {
 .images {
   padding: 8rem 20rem;
   width: 100%;
-  height: 60vh;
+  min-height: 60vh;
   background: #141e30;
-  background: -webkit-linear-gradient(to top, #243b55, #141e30);
-  background: linear-gradient(to top, #243b55, #141e30);
+  background: linear-gradient(to top, #72abfb, #76e2ff);
   display: flex;
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
+}
+@media only screen and (max-width: 375px) {
+  .images {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .images {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .images {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .images {
+    flex-direction: row;
+    padding: 8rem 20rem;
+  }
 }
 .images .card {
   border-radius: 16px;
@@ -1757,6 +1827,24 @@ a {
   position: relative;
   overflow: hidden;
   box-shadow: 0 5px 50px rgba(0, 0, 0, 0.85);
+}
+@media only screen and (max-width: 375px) {
+  .images .card {
+    width: 300px;
+    height: 300px;
+    background: url("/assets/img/sass-res-1.jpg");
+    margin: 2rem;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .images .card {
+    margin: 2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .images .card {
+    margin: 2rem;
+  }
 }
 .images .card:before {
   content: "";
@@ -1779,6 +1867,11 @@ a {
   height: 100%;
   background: url(https://picsum.photos/360/360?image=0);
   transition: 0.5s;
+}
+@media only screen and (max-width: 375px) {
+  .images .card .img span {
+    background: url("/assets/img/sass-res-1.jpg");
+  }
 }
 .images .card .img span:nth-child(1) {
   background-position: 0;
@@ -1823,10 +1916,33 @@ a {
   border-radius: 16px;
   width: 360px;
   height: 360px;
-  background: url("/assets/img/sass-1.jpg");
+  background: url("/assets/img/sass-2.jpg");
   position: relative;
   overflow: hidden;
   box-shadow: 0 5px 50px rgba(0, 0, 0, 0.85);
+}
+@media only screen and (max-width: 375px) {
+  .images .card2 {
+    width: 300px;
+    height: 300px;
+    background: url("/assets/img/sass-res-2.jpg");
+    margin: 2rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .images .card2 {
+    margin: 2rem;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .images .card2 {
+    margin: 2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .images .card2 {
+    margin: 2rem;
+  }
 }
 .images .card2:before {
   content: "";
@@ -1847,8 +1963,13 @@ a {
 .images .card2 .img span {
   width: 25%;
   height: 100%;
-  background: url("/assets/img/sass-1.jpg");
+  background: url("/assets/img/sass-2.jpg");
   transition: 0.5s;
+}
+@media only screen and (max-width: 375px) {
+  .images .card2 .img span {
+    background: url("/assets/img/sass-res-2.jpg");
+  }
 }
 .images .card2 .img span:nth-child(1) {
   background-position: 0;
@@ -1893,10 +2014,33 @@ a {
   border-radius: 16px;
   width: 360px;
   height: 360px;
-  background: url("/assets/img/sass-2.jpg");
+  background: url("/assets/img/sass-3.jpg");
   position: relative;
   overflow: hidden;
   box-shadow: 0 5px 50px rgba(0, 0, 0, 0.85);
+}
+@media only screen and (max-width: 375px) {
+  .images .card3 {
+    width: 300px;
+    height: 300px;
+    background: url("/assets/img/sass-res-3.jpg");
+    margin: 2rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .images .card3 {
+    margin: 2rem;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .images .card3 {
+    margin: 2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .images .card3 {
+    margin: 2rem;
+  }
 }
 .images .card3:before {
   content: "";
@@ -1917,8 +2061,13 @@ a {
 .images .card3 .img span {
   width: 25%;
   height: 100%;
-  background: url("/assets/img/sass-2.jpg");
+  background: url("/assets/img/sass-3.jpg");
   transition: 0.5s;
+}
+@media only screen and (max-width: 375px) {
+  .images .card3 .img span {
+    background: url("/assets/img/sass-res-3.jpg");
+  }
 }
 .images .card3 .img span:nth-child(1) {
   background-position: 0;

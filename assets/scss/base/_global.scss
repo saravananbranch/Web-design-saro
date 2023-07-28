@@ -21,6 +21,9 @@
     rgb(238, 255, 0)
   );
 }
+.hidden {
+  display: none;
+}
 
 // img responsive
 @include mixins.responsive(xxs) {

@@ -23,6 +23,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
 
     <!-- ========== Start custom style ========== -->
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -41,25 +45,39 @@
       </div>
       <div>
         <div class="menu-bar">
-          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars nav-icon"></i>
+          <i class="fa-sharp fa-solid fa-xmark nav-icon hidden"></i>
         </div>
         <ul class="header--menu">
           <li class="header--menu__item">
-            <a href="#" class="active">Home</a>
+            <a href="#home" class="active">Home</a>
           </li>
-          <li class="header--menu__item"><a href="#">About</a></li>
-          <li class="header--menu__item"><a href="#">Roadmap</a></li>
+          <li class="header--menu__item"><a href="#about">About</a></li>
+          <li class="header--menu__item"><a href="#roadmap">Roadmap</a></li>
           <li>
-            <a href="#" class="btn-primary">Contact Us</a>
+            <a href="#contact" class="btn-primary">Contact Us</a>
           </li>
         </ul>
       </div>
     </header>
+    <!-- ========== Start header responsive ========== -->
+    <ul class="header--responsive">
+      <li class="header--menu__item">
+        <a href="#home" class="active">Home</a>
+      </li>
+      <li class="header--menu__item"><a href="#about">About</a></li>
+      <li class="header--menu__item"><a href="#roadmap">Roadmap</a></li>
+      <li>
+        <a href="#contact" class="btn-primary">Contact Us</a>
+      </li>
+    </ul>
+    <!-- ========== End header responsive ========== -->
+
     <!-- ========== End header ========== -->
 
     <!-- ========== Start main ========== -->
     <main>
-      <section class="hero-area">
+      <section id="home" class="hero-area">
         <div class="background-shapes">
           <div class="box1"></div>
           <div class="box2"></div>
@@ -111,7 +129,7 @@
           />
         </div>
       </section>
-      <section class="about-area space-x-5 space-y-5">
+      <section id="about" class="about-area space-x-5 space-y-5">
         <div data-aos="fade-right" data-aos-duration="1000">
           <img
             src="./assets/img/web-development-illustration.png"
@@ -133,7 +151,7 @@
           </p>
         </div>
       </section>
-      <section class="roadmap">
+      <section id="roadmap" class="roadmap">
         <div class="roadmap--heading">
           <h2>Roadmap to Expertise</h2>
           <p>Start it slow, finish it with style</p>
@@ -181,7 +199,7 @@
           </div>
         </div>
       </section>
-      <section class="images">
+      <section id="images" class="images">
         <div class="card">
           <div class="img">
             <span></span>
@@ -211,11 +229,10 @@
           <div class="content">
             <h2>SASS</h2>
             <h4>
-              Sass is a preprocessor scripting language that is interpreted or
-              compiled into Cascading Style Sheets. SassScript is the scripting
-              language itself. Sass consists of two syntaxes. The original
-              syntax, called "the indented syntax," uses a syntax similar to
-              Haml.
+              Sass (which stands for Syntactically Awesome Style Sheets) is an
+              extension to CSS. It doesn't really change what CSS can do, you
+              won't suddenly be able to use Adobe Photoshop blend modes or
+              anything-but it makes writing CSS a whole lot easier.
             </h4>
           </div>
         </div>
@@ -230,16 +247,16 @@
           <div class="content">
             <h2>SASS</h2>
             <h4>
-              Sass is a preprocessor scripting language that is interpreted or
-              compiled into Cascading Style Sheets. SassScript is the scripting
-              language itself. Sass consists of two syntaxes. The original
-              syntax, called "the indented syntax," uses a syntax similar to
-              Haml.
+              A browser does not understand Sass code. Therefore, you will need
+              a Sass pre-processor to convert Sass code into standard CSS. This
+              process is called transpiling. So, you need to give a transpiler
+              (some kind of program) some Sass code and then get some CSS code
+              back.
             </h4>
           </div>
         </div>
       </section>
-      <section class="contact">
+      <section id="contact" class="contact">
         <div class="contact-card">
           <form
             class="contact-card--contents space-y-1"
@@ -341,5 +358,9 @@
       AOS.init();
     </script> -->
     <!-- ========== End AOS ========== -->
+
+    <!-- ========== Start main script ========== -->
+    <script src="./assets/js/main.js"></script>
+    <!-- ========== End main script ========== -->
   </body>
 </html>
